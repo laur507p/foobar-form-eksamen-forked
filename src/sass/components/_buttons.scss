@@ -1,0 +1,18 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+.form-button {
+  padding: 1rem 1rem;
+  background: white;
+  color: blue;
+}
+
+.confirm-button {
+  @include theme-aware("background-color", "confirm-button");
+  place-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  @include theme-aware("box-shadow", "box-shadow");
+}

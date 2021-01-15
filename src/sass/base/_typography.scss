@@ -1,0 +1,97 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+h1 {
+  @include theme-aware("color", "dark-color");
+  font-family: vtf_misterpixelregular;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include theme-aware("color", "text-color");
+  font-family: vtf_misterpixelregular;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+h3 {
+  @include theme-aware("color", "text-color");
+  font-family: vtf_misterpixelregular;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.confirmation-text h1 {
+  @include theme-aware("text-shadow", "text-shadow");
+  @include theme-aware("color", "splash-color");
+  font-size: 5.5rem;
+}
+
+.confirmation-p {
+  margin: 20px 0;
+}
+
+p,
+input,
+label {
+  @include theme-aware("color", "text-color");
+  font-family: pt-mono;
+  font-size: 1rem;
+}
+
+#top-header {
+  p,
+  h1 {
+    @include theme-aware("color", "header-txt-color");
+  }
+}
+
+.large_text h1 {
+  @include theme-aware("text-shadow", "text-shadow");
+  @include theme-aware("color", "splash-color");
+  font-size: 4rem;
+}
+
+.number,
+.screen button {
+  font-family: pt-mono;
+  font-size: 1.3rem;
+}
+
+.beer-price {
+  font-family: pt-mono;
+  font-size: 0.9rem;
+  @include theme-aware("color", "price-color");
+}
+
+.form-button {
+  @include theme-aware("color", "form-button-color");
+  font-family: vtf_misterpixelregular;
+  font-size: 1rem;
+}
+
+.confirm-button h3 {
+  @include theme-aware("color", "bottom-section-txt");
+  font-size: 2rem;
+}
+
+#confirmbutton {
+  @include theme-aware("color", "bottom-section-txt");
+  font-size: 2rem;
+  background-color: transparent;
+  font-family: vtf_misterpixelregular;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .large_text h1 {
+    font-size: 6rem;
+  }
+
+  .confirmation-text {
+    font-size: 5rem;
+  }
+}

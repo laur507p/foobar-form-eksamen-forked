@@ -1,0 +1,123 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+input {
+  width: 100%;
+}
+
+.form-container h1 {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 16px 8px;
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("olor", "text-color");
+  @include theme-aware("box-shadow", "box-shadow");
+  font-family: pt-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  border: 2px solid;
+  @include theme-aware("border-color", "border-color");
+  display: block;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  outline: none;
+  transition: border 0.3s;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input[type="text"]:focus {
+  border: 2px solid;
+  @include theme-aware("border-color", "text-color");
+  @include theme-aware("background-color", "background-color");
+  border-radius: 0;
+  transition: border 0.3s;
+}
+
+#tablenumber {
+  width: 20%;
+  display: block;
+  padding: 10px;
+  font-family: pt-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  border: 2px solid;
+  margin: 5px 0 15px 0;
+  outline: none;
+  border-radius: 0;
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("olor", "text-color");
+  @include theme-aware("border-color", "border-color");
+}
+
+.form-container .payment-h1 {
+  margin-top: 50px;
+}
+
+.hint {
+  font-family: pt-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  font-size: 0.7rem;
+}
+
+.form-field-container {
+  width: 25%;
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+#cvc {
+  width: 80%;
+}
+#expiration_date {
+  width: 94%;
+}
+
+input[type="email"] {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 16px;
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("olor", "text-color");
+  @include theme-aware("box-shadow", "box-shadow");
+  font-family: pt-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  border: 2px solid;
+  @include theme-aware("border-color", "border-color");
+  display: block;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="email"]:focus {
+  border: 2px solid;
+  @include theme-aware("border-color", "text-color");
+  @include theme-aware("background-color", "background-color");
+  border-radius: 0;
+  transition: border 0.3s;
+}
+
+@media only screen and (min-width: 600px) {
+  .form-container h1 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+  }
+}

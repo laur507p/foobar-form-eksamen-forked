@@ -1,0 +1,59 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+#top-header {
+  @include theme-aware("background", "header-color");
+  @include theme-aware("border-color", "border-color");
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100vw;
+  z-index: 10000;
+
+  h1 {
+    text-transform: none;
+    font-size: 1.5rem;
+
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  p {
+    align-self: center;
+    margin-right: 5px;
+  }
+  div {
+    align-items: center;
+    align-self: center;
+  }
+  div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  select {
+    @include theme-aware("color", "header-txt-color");
+    @include theme-aware("border-color", "header-border-color");
+    background-color: transparent;
+    border: 2px solid;
+    margin: 5px;
+    font-family: "vtf_misterpixelregular";
+  }
+  #smiley {
+    font-family: "vtf_misterpixeltools";
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+#top-spacer {
+  height: 50px;
+  z-index: 10000;
+}
+
+#main-wrapper {
+  position: relative;
+  place-items: center;
+}

@@ -1,0 +1,217 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+.disabled {
+  pointer-events: none;
+}
+.screen {
+  li {
+    margin-bottom: 25px;
+    padding: 1rem;
+    border-style: solid;
+    @include theme-aware("border-color", "border-color");
+    border-width: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  li p {
+    font-size: 0.8rem;
+  }
+
+  .li-text {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  .li-info {
+    flex-basis: 200px;
+    flex-grow: 1;
+    align-items: flex-start;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1vh;
+  }
+
+  // SKAL LÆGGERS I BUTTONS
+  .add-remove-button {
+    .number {
+      padding: 0 0.5rem;
+    }
+
+    button {
+      @include theme-aware("color", "button-color");
+      height: 100%;
+      align-content: center;
+      background: none;
+      padding: 0 2rem;
+      transition: 0.3s;
+    }
+
+    @include theme-aware("border-color", "border-color");
+    @include theme-aware("color", "button-color");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-left: 5vw;
+    border-style: solid;
+    border-width: 3px;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .bottom-section {
+    @include theme-aware("background-color", "bottom-section");
+
+    display: flex;
+    flex-direction: row;
+    height: 11vh;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom-section p {
+    @include theme-aware("color", "bottom-section-txt");
+  }
+
+  @include theme-aware("box-shadow", "box-shadow");
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("border-color", "border-color");
+  border-style: solid;
+  border-width: 5px;
+
+  top: 150px;
+  left: 5vw;
+  right: 5vw;
+  padding: 0;
+  min-height: 80vh;
+  width: 90vw;
+  max-width: 1000px;
+}
+
+.window-elements {
+  width: 50px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+// farve der kommer når man har en beer i sin cart
+.screen .add-remove-button .button-clicked {
+  @include theme-aware("background-color", "border-color");
+  transition: 0.3s;
+  @include theme-aware("color", "background-color");
+}
+
+.window-top {
+  svg {
+    #Ellipse_5,
+    #Line_65,
+    #Line_66 {
+      @include theme-aware("stroke", "border-color");
+    }
+    width: 2.5rem;
+    margin-left: 1vw;
+  }
+
+  @include theme-aware("border-color", "border-color");
+  display: flex;
+  width: 100%;
+  height: 4vh;
+  border-bottom-style: solid;
+  border-width: 0.3rem;
+  margin: 0;
+}
+
+.window-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  overflow: scroll;
+  height: 65vh;
+}
+
+.window-reset {
+  height: 75vh;
+}
+
+.edit-order-button {
+  @include theme-aware("background-color", "border-color");
+  font-family: pt-mono;
+  font-size: 0.8rem;
+  padding: 25px 20px 20px 20px;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  top: -4vh;
+  right: -6vw;
+  text-align: center;
+  position: absolute;
+  @include theme-aware("color", "background-color");
+}
+@media only screen and (min-width: 520px) {
+  .screen .add-remove-button button {
+    padding: 0 0.5rem;
+  }
+  .screen .add-remove-button {
+    width: 150px;
+  }
+
+  .edit-order-button {
+    @include theme-aware("background-color", "border-color");
+    font-family: pt-mono;
+    font-size: 1rem;
+    padding: 28px 20px 20px 20px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    top: -3vh;
+    right: -5vw;
+    text-align: center;
+    position: absolute;
+    @include theme-aware("color", "background-color");
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .screen {
+    top: 150px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .screen .bottom-section {
+    padding: 2.5rem;
+  }
+
+  .window-elements {
+    width: 50px;
+  }
+
+  .window-container {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .edit-order-button {
+    @include theme-aware("background-color", "border-color");
+    font-family: pt-mono;
+    font-size: 1rem;
+    padding: 28px 20px 20px 20px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    top: -5vh;
+    right: -3vw;
+    text-align: center;
+    position: absolute;
+    @include theme-aware("color", "background-color");
+  }
+}

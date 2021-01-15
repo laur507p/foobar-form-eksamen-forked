@@ -1,0 +1,92 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+.navigation {
+  li {
+    padding: 10px;
+    text-align: center;
+  }
+  nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("border-color", "border-color");
+  margin-bottom: 10px;
+  width: 100vw;
+  font-family: pt-mono, monospace;
+  @include theme-aware("color", "text-color");
+  border: 2px solid black;
+  font-size: 0.6rem;
+  ul {
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.progressbar {
+  margin-top: 10px;
+  width: 85vw;
+  height: 15px;
+  @include theme-aware("background-color", "background-color");
+  @include theme-aware("border-color", "text-color");
+  border: 2px solid;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+// .progressbox_container {
+//   width: 90%;
+//   height: 20px;
+//   background-color: hotpink;
+//   position: absolute;
+//   top: 20%;
+//   left: 5%;
+// }
+
+.progressbox {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 8px;
+  @include theme-aware("background-color", "text-color");
+  margin: 2px 1px 2px 1px;
+}
+
+.progressbox:nth-child(1) {
+  margin-left: 1.5px;
+}
+
+.hide {
+  display: none;
+}
+
+// .progressbox_overlay {
+//   width: 90%;
+//   height: 20px;
+//   background-color: orange;
+//   opacity: 0.5;
+//   position: absolute;
+//   top: 20%;
+//   left: 5%;
+// }
+
+@media only screen and (min-width: 600px) {
+  .navigation {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navigation ul {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .progressbar {
+    max-width: 550px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "./sass/mixins";
+@import "./sass/color-palette";
+
+html {
+  height: 100%;
+}
+
+body {
+  @include theme-aware("background-image", "theme-background-img");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  background-position: 50% 50%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.screen {
+  background-color: white;
+  border: 1px solid blue;
+  width: 50vw;
+  left: 25vw;
+}
+
+.large_text {
+  .confirm-button {
+    position: fixed;
+    width: 90%;
+    bottom: 6%;
+  }
+  justify-content: center;
+  display: flex;
+  align-content: center;
+}
+
+// @media only screen and (min-width: 600px) {
+// }
